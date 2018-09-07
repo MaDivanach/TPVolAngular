@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {Vol} from '../model/vol';
 
 @Injectable({
   providedIn: 'root'
@@ -24,14 +25,14 @@ export class VolService {
     return this.http.get<Vol>(`${this.url}/rest/vol/${id}`);
   }
 
-  public save(adherent: Vol): Observable<any> {
-    if (adherent.id) {
+  public save(vol: Vol): Observable<any> {
+    if (vol.id) {
       // update
-      return this.http.put(`${this.url}/rest/vol/`, adherent);
+      return this.http.put(`${this.url}/rest/vol/`, vol);
     } else {
       // create
       const o = {
-        id: vol.id, dateDepart: vol.dateDepart(), dateArrivee: vol.dateArrivee
+        id: vol.id, dateDepart: vol.dateDepart, dateArrivee: vol.dateArrivee
       };
       return this.http.post(`${this.url}/rest/adherent/`, o);
     }

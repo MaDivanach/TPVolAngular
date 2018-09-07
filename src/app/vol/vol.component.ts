@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {VolService} from '../service/vol.service';
+import {Vol} from '../model/vol';
+
 
 @Component({
   selector: 'app-vol',
@@ -8,9 +10,9 @@ import {VolService} from '../service/vol.service';
 })
 export class VolComponent implements OnInit {
 
-  vols: vol[];
+  vols: Vol[];
 
-  constructor() {
+  constructor(private volService : VolService) {
   }
 
   ngOnInit() {

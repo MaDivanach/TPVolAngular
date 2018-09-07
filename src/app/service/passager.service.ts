@@ -28,5 +28,17 @@ export class PassagerService {
     return this.http.get<Passager>(`${this.url}/rest/passager/${id}`);
   }
 
+  public save(passager: Passager): Observable<any> {
+    if (passager.id) {
+      return this.http.put(`${this.url}/rest/passager/`, passager);
+    } else {
+      const o = {
+        id: passager.id, nom: passager.nom, prenom: passager.prenom
+      };
+      console.log(o);
+      return this.http.post(`${this.url}/rest/passager`, o);
+    }
+  }
+
 
 }

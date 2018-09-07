@@ -1,22 +1,33 @@
-<h1>Liste des vols</h1>
-<table class="table">
-  <tr>
-    <th>n° de vol</th>
-    <th>date de depart</th>
-    <th>heure de depart</th>
-    <th>date d'arrivee</th>
-    <th>heure d'arrivee</th>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr *ngFor="let vol of vols">
-    <td>{{vol.id}}</td>
-    <td>{{vol.dateDepart}}</td>
-    <td>{{vol.heureDepart}}</td>
-    <td>{{vol.dateArrivee}}</td>
-    <td>{{vol.heureArrivee}}</td>
-    <td><a href="" [routerLink]="['/vol', 'edit', vol.id]" class="btn btn-info">Edition</a></td>
-    <td>
-      <button class="btn btn-danger" (click)="delete(vol.id)">Supprimer</button>
-    </td>
-  </tr>
+<!--<div>
+  <p>Entree de nouveaux vols : </p>
+  <div>
+    <input [(ngModel)]="vol.dateDepart"><input [(ngModel)]="vol.dateArrivee"><input [(ngModel)]="vol.heureDepart"><input [(ngModel)]="vol.heureArrivee">
+    <button (click)="add()" type="submit" class="btn btn-success">ajouter</button>
+  </div>
+</div>-->
+
+<div>
+  <h1>Liste des vols</h1>
+  <table class="table">
+    <tr>
+      <th scope="col">n° de vol</th>
+      <th scope="col">date de depart</th>
+      <th scope="col">heure de depart</th>
+      <th scope="col">date d'arrivee</th>
+      <th scope="col">heure d'arrivee</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let vol of vols; let index= index">
+      <td scope="rol">{{vol.id}}</td>
+      <td scope="rol">{{vol.dateDepart}}</td>
+      <td scope="rol">{{vol.heureDepart}}</td>
+      <td scope="rol">{{vol.dateArrivee}}</td>
+      <td scope="rol">{{vol.heureArrivee}}</td>
+      <td><a href="" [routerLink]="['/vol', 'edit', vol.id]" class="btn btn-info">Edition</a></td>
+      <td>
+        <button class="btn btn-danger" (click)="delete(vol.id)">Supprimer</button>
+      </td>
+    </tr>
+</div>
+

@@ -27,7 +27,7 @@ export class ReservationService {
     return this.http.put(`${this.url}/rest/reservation`, reservation);
   }
 
-  public delete(id: number) {
+  public delete(id: number): Observable<any> {
     return this.http.delete(`${this.url}/rest/reservation/${id}`);
   }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Reservation} from '../model/reservation';
 
 @Component({
   selector: 'app-reservation-edit',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reservation-edit.component.css']
 })
 export class ReservationEditComponent implements OnInit {
+  private _reservation: Reservation;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  get reservation(): Reservation {
+    return this._reservation;
+  }
+
+  set reservation(value: Reservation) {
+    this._reservation = value;
+  }
 }

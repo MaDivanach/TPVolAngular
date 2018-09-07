@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {VolService} from '../service/vol.service';
+import {Vol} from '../model/vol';
 
 @Component({
   selector: 'app-vol-edit',
@@ -10,7 +12,7 @@ export class VolEditComponent implements OnInit {
 
   vol: Vol = new Vol();
 
-  constructor(private adherentService: VolService, private ar: ActivatedRoute, private router: Router) { }
+  constructor(private volService: VolService, private ar: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.ar.params.subscribe(params => {

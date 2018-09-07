@@ -1,7 +1,7 @@
-import {Time} from '@angular/common';
+import {Date} from '@angular/common';
 
 export class Vol {
-  constructor(private _id?: number, private _dateDepart?: Date, private _dateArrivee?: Date, private _heureDepart?: Time, private _heureArrivee?: Time) {
+  constructor(private _id?: number, private _dateDepart?: Date, private _dateArrivee?: Date, private _heureDepart?: Date, private _heureArrivee?: Date) {
 
   }
 
@@ -31,19 +31,19 @@ export class Vol {
     this._dateArrivee = value;
   }
 
-  get heureDepart(): Time {
+  get heureDepart(): Date {
     return this._heureDepart;
   }
 
-  set heureDepart(value: Time) {
+  set heureDepart(value: Date) {
     this._heureDepart = value;
   }
 
-  get heureArrivee(): Time {
+  get heureArrivee(): Date {
     return this._heureArrivee;
   }
 
-  set heureArrivee(value: Time) {
+  set heureArrivee(value: Date) {
     this._heureArrivee = value;
   }
 }

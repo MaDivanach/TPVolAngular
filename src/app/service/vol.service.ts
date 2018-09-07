@@ -34,7 +34,7 @@ export class VolService {
       const o = {
         id: vol.id, dateDepart: vol.dateDepart, dateArrivee: vol.dateArrivee
       };
-      return this.http.post(`${this.url}/rest/adherent/`, o);
+      return this.http.post(`${this.url}/rest/vol/`, o);
     }
   }
 

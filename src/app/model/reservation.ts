@@ -1,11 +1,15 @@
+import {Client} from './client';
+import {Passager} from './passager';
+import {Vol} from './vol';
+
 export class Reservation {
   constructor(
     private _id?: number,
     private _date?: Date,
     private _numero?: number,
-    /*private _client?: Client,
+    private _client?: Client,
     private _vol?: Vol,
-    private _passager?: Passager*/) {
+    private _passager?: Passager) {
   }
 
   get id(): number {
@@ -32,7 +36,7 @@ export class Reservation {
     this._numero = value;
   }
 
-/*  get client(): Client {
+  get client(): Client {
     return this._client;
   }
 
@@ -53,6 +57,6 @@ export class Reservation {
   }
 
   set passager(value: Passager) {
-    this._passager = value;*/
+    this._passager = value;
   }
 }

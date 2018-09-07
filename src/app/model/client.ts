@@ -52,10 +52,10 @@ export class Client {
   }
 
   get login(): Login {
-    return this._Login;
+    return this._login;
   }
 
   set login(value: Login) {
-    this._Login = value;
+    this._login = value;
   }
 }

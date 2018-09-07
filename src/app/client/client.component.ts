@@ -8,7 +8,7 @@ import {Client} from '../model/client';
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent implements OnInit {
-  clients : Client[]=[new Client(1,"antoine", "cavalier")];
+  clients: Client[];
 
   constructor(private clientService: ClientService) { }
 
@@ -19,7 +19,6 @@ export class ClientComponent implements OnInit {
   public list() {
     this.clientService.list().subscribe(resp => {
       this.clients = resp;
-      console.log(resp);
     });
   }
   public delete(id_client: number) {

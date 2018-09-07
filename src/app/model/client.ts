@@ -1,5 +1,5 @@
 export class Client {
-  constructor(private _id?: number, private _nom?: string, private _numeroTel?: number, private _numeroFax?: number, private _email?: string, private _adresse?: Adresse, private _Login?: login) {
+  constructor(private _id?: number, private _nom?: string, private _numeroTel?: number, private _numeroFax?: number, private _email?: string, private _adresse?: Adresse, private _login?: Login) {
 
   }
 
@@ -51,11 +51,11 @@ export class Client {
     this._adresse = value;
   }
 
-  get Login(): login {
-    return this._Login;
+  get login(): Login {
+    return this._login;
   }
 
-  set Login(value: login) {
-    this._Login = value;
+  set login(value: Login) {
+    this._login = value;
   }
 }

@@ -8,6 +8,10 @@
     <td>Vol</td>
   </tr>
   <tr *ngFor="let reservation of reservations">
-
+    <td>{{reservation.id}}</td>
+    <td>{{reservation.numero}}</td>
+    <td>{{reservation.client.id}} {{reservation.client.nom}}</td>
+    <td>{{reservation.passager.id}} {{reservation.passager.nom}}</td>
+    <td>{{reservation.vol.id}}</td>
   </tr>
 </table>

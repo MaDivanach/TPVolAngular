@@ -1,3 +1,19 @@
-<p>
-  passager works!
-</p>
+<h1>Liste des passagers</h1>
+<table class="table">
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Prenom</th>
+    <th scope="col">Nom</th>
+  </tr>
+  <tr *ngFor="let passager of passagers">
+    <td scope="rol">{{passager.id}}</td>
+    <td scope="rol">{{passager.prenom}}</td>
+    <td scope="rol">{{passager.nom}}</td>
+    <td><a href="" [routerLink]="['/adherent','edit',passager.id]" routerLinkActive="active" class="btn btn-info">edition</a></td>
+    <td>
+      <button class="btn btn-danger" (click)="delete(passager.id)">supprimer</button>
+    </td>
+  </tr>
+</table>
+<a href="" [routerLink]="['/passager','create']" class="btn btn-info">ajouter</a>
+

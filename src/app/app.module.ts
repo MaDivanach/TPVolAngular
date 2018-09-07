@@ -16,8 +16,7 @@ import {VolComponent} from './vol/vol.component';
 import {VolService} from './service/vol.service';
 import {ReservationService} from './service/reservation.service';
 import {ClientService} from './service/client.service';
-import { PassagerEditComponent } from './passager/passager-edit.component';
-
+import {PassagerEditComponent} from './passager/passager-edit.component';
 
 
 @NgModule({
@@ -31,8 +30,7 @@ import { PassagerEditComponent } from './passager/passager-edit.component';
     ReservationComponent,
     ReservationEditComponent,
     PassagerComponent,
-    PassagerEditComponent,
-    PassagerComponent,
+    PassagerEditComponent
   ],
   imports: [
     BrowserModule, FormsModule, RouterModule, RouterModule.forRoot(routes), HttpClientModule

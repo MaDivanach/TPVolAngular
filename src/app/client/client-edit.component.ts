@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ClientService} from '../service/client.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-client-edit',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientEditComponent implements OnInit {
 
-  constructor() { }
+  client: Client = new Client();
 
-  ngOnInit() {
+  constructor(private clientService: ClientService, private ar: ActivatedRoute, private router: Router) {
+
   }
 
+  ngOnInit() {
+    this.ar.params.subscribe(params => {
+      if (params.id) {
+        this.clientService.findById(params.id).subscribe(resp => {
+          this.client = resp;
+        });
+      }
+    });
+  }
+
+  public save() {
+    this.clientService.save(this.client).subscribe(resp => {
+      this.router.navigate(['/client']);
+    });
+  }
 }

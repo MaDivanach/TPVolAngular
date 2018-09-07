@@ -6,6 +6,8 @@ import { ClientComponent } from './client/client.component';
 import { ClientEditComponent } from './client/client-edit.component';
 import { VolComponent } from './Vol/vol/vol.component';
 import { VolEditComponent } from './vol/vol-edit.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { ReservationEditComponent } from './reservation/reservation-edit.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,9 @@ import { VolEditComponent } from './vol/vol-edit.component';
     ClientEditComponent
     VolComponent,
     VolEditComponent
+    AppComponent,
+    ReservationComponent,
+    ReservationEditComponent
   ],
   imports: [
     BrowserModule

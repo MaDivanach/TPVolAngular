@@ -1,7 +1,7 @@
 <h1>table des clients</h1>
 <table class="table">
   <tr *ngFor=" let c of clients">
-    <td>{{c.id_client}}</td>
+    <td>{{c.id}}</td>
     <td>{{c.nom}}</td>
     <td>{{c.numeroTel}}</td>
     <td>{{c.numeroFax}}</td>
@@ -9,9 +9,9 @@
     <td>{{c.adresse}}</td>
     <td>{{c.login}}</td>
     <td>{{c.reservations}}</td>
-    <td><a href="" [routerLink]="['/client','edit',c.id_client]" class="btn btn-info">edition</a></td>
+    <td><a href="" [routerLink]="['/client','edit',c.id]" class="btn btn-info">edition</a></td>
     <td>
-      <button class="btn btn-danger" (click)="delete(c.id_client)">supprimer</button>
+      <button class="btn btn-danger" (click)="delete(c.id)">supprimer</button>
     </td>
   </tr>
 </table>

@@ -1,0 +1,22 @@
+<h1>Liste des adherents</h1>
+<table class="table">
+  <tr>
+    <th>n° de vol</th>
+    <th>date de depart</th>
+    <th>date d'arrivee</th>
+    <th>heure de depart</th>
+    <th>heure d'arrivee</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let vol of vols">
+    <td>{{vol.id}}</td>
+    <td>{{vol.dateDepart}}</td>
+    <td>{{adherent.nom}}</td>
+    <td>{{adherent.dateNaissance}}</td>
+    <td>{{adherent.adresse.rue}}</td>
+    <td><a href="" [routerLink]="['/adherent', 'edit', adherent.id]" class="btn btn-info">Edition</a></td>
+    <td>
+      <button class="btn btn-danger" (click)="delete(adherent.id)">Supprimer</button>
+    </td>
+  </tr>

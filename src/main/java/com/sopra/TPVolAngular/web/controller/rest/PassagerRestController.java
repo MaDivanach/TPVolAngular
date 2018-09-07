@@ -1,4 +1,4 @@
-package com.sopra.TPVolSpring.controller.rest;
+package com.sopra.TPVolAngular.web.controller.rest;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.sopra.TPVolSpring.model.Passager;
-import com.sopra.TPVolSpring.model.view.JsonViews;
-import com.sopra.TPVolSpring.repositories.PassagerRepository;
+import com.sopra.TPVolAngular.model.Passager;
+import com.sopra.TPVolAngular.model.view.JsonViews;
+import com.sopra.TPVolAngular.repositories.PassagerRepository;
 
 
 

@@ -51,11 +51,11 @@ export class Client {
     this._adresse = value;
   }
 
-  get Login(): login {
+  get login(): Login {
     return this._Login;
   }
 
-  set Login(value: login) {
+  set login(value: Login) {
     this._Login = value;
   }
 }

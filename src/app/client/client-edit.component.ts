@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Client} from '../model/client';
 import {ClientMoral} from '../model/clientMoral';
 import {ClientPhysique} from '../model/clientPhysique';
+import {ClientEl} from '../model/clientEl';
 
 @Component({
   selector: 'app-client-edit',

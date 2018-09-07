@@ -14,6 +14,7 @@ export const routes: Routes = [{path: 'home', component: AppComponent},
   {path: 'reservation', component: ReservationComponent},
   {path: 'client', component: ClientComponent},
   {path: 'client/create', component: ClientEditComponent},
+  {path: 'client/edit/:id', component: ClientEditComponent},
   {path: 'vol', component: VolComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];

@@ -30,8 +30,7 @@ import {PassagerEditComponent} from './passager/passager-edit.component';
     ReservationComponent,
     ReservationEditComponent,
     PassagerComponent,
-    PassagerEditComponent,
-    PassagerComponent
+    PassagerEditComponent
   ],
   imports: [
     BrowserModule, FormsModule, RouterModule, RouterModule.forRoot(routes), HttpClientModule

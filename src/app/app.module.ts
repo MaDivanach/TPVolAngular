@@ -1,29 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import { ClientEditComponent } from './client/client-edit.component';
-import { VolComponent } from './Vol/vol/vol.component';
 import { VolEditComponent } from './vol/vol-edit.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ReservationEditComponent } from './reservation/reservation-edit.component';
+import { PassagerComponent } from './passager/passager.component';
+import {PassagerService} from './service/passager.service';
+import {RouterModule} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import {routes} from './route';
+import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
-    ClientEditComponent
-    VolComponent,
-    VolEditComponent
+    ClientEditComponent,
+    VolEditComponent,
     AppComponent,
     ReservationComponent,
-    ReservationEditComponent
+    ReservationEditComponent,
+    PassagerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule, RouterModule, RouterModule.forRoot(routes), HttpClientModule
   ],
-  providers: [],
+  providers: [PassagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

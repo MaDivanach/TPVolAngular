@@ -1,3 +1,6 @@
+import {Adresse} from './adresse';
+import {Login} from './login';
+
 export class Client {
   constructor(private _id?: number, private _nom?: string, private _numeroTel?: number, private _numeroFax?: number, private _email?: string, private _adresse?: Adresse, private _login?: Login) {
 

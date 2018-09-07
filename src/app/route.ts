@@ -5,6 +5,7 @@ import {PassagerComponent} from './passager/passager.component';
 import {ClientComponent} from './client/client.component';
 import {VolComponent} from './vol/vol.component';
 import {PassagerEditComponent} from './passager/passager-edit.component';
+import {ClientEditComponent} from './client/client-edit.component';
 
 export const routes: Routes = [{path: 'home', component: AppComponent},
   {path: 'passager', component: PassagerComponent},
@@ -12,6 +13,8 @@ export const routes: Routes = [{path: 'home', component: AppComponent},
   {path: 'passager/edit/:id', component: PassagerEditComponent},
   {path: 'reservation', component: ReservationComponent},
   {path: 'client', component: ClientComponent},
+  {path: 'client/create', component: ClientEditComponent},
+  {path: 'client/edit/:id', component: ClientEditComponent},
   {path: 'vol', component: VolComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];

@@ -17,9 +17,6 @@ import {VolService} from './service/vol.service';
 import {ReservationService} from './service/reservation.service';
 import {ClientService} from './service/client.service';
 import { PassagerEditComponent } from './passager/passager-edit.component';
-import { ClientEIEditComponent } from './client/client-ei-edit.component';
-import { ClientMoralEditComponent } from './client/client-moral-edit/client-moral-edit.component';
-import { ClientPhysiqueEditComponent } from './client/client-physique-edit/client-physique-edit.component';
 
 
 
@@ -34,11 +31,8 @@ import { ClientPhysiqueEditComponent } from './client/client-physique-edit/clien
     ReservationComponent,
     ReservationEditComponent,
     PassagerComponent,
-    PassagerEditComponent
+    PassagerEditComponent,
     PassagerComponent,
-    ClientEIEditComponent,
-    ClientMoralEditComponent,
-    ClientPhysiqueEditComponent
   ],
   imports: [
     BrowserModule, FormsModule, RouterModule, RouterModule.forRoot(routes), HttpClientModule

@@ -67,7 +67,7 @@ public class ReservationRestController {
 	}
 
 	@PostMapping(path = { "/", "" })
-	public ResponseEntity<Void> createReservation(@Valid @RequestBody Reservation reservation, BindingResult br,
+	public ResponseEntity<Void> create(@Valid @RequestBody Reservation reservation, BindingResult br,
 			UriComponentsBuilder uCB) {
 		ResponseEntity<Void> response = null;
 		if (br.hasErrors()) {

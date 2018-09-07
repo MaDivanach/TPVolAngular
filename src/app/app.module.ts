@@ -12,6 +12,7 @@ import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {routes} from './route';
 import {FormsModule} from '@angular/forms';
+import { PassagerEditComponent } from './passager/passager-edit.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {FormsModule} from '@angular/forms';
     AppComponent,
     ReservationComponent,
     ReservationEditComponent,
-    PassagerComponent
+    PassagerComponent,
+    PassagerEditComponent
   ],
   imports: [
     BrowserModule, FormsModule, RouterModule, RouterModule.forRoot(routes), HttpClientModule

@@ -12,6 +12,9 @@ import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {routes} from './route';
 import {FormsModule} from '@angular/forms';
+import { ClientEIEditComponent } from './client/client-ei-edit.component';
+import { ClientMoralEditComponent } from './client/client-moral-edit/client-moral-edit.component';
+import { ClientPhysiqueEditComponent } from './client/client-physique-edit/client-physique-edit.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import {FormsModule} from '@angular/forms';
     AppComponent,
     ReservationComponent,
     ReservationEditComponent,
-    PassagerComponent
+    PassagerComponent,
+    ClientEIEditComponent,
+    ClientMoralEditComponent,
+    ClientPhysiqueEditComponent
   ],
   imports: [
     BrowserModule, FormsModule, RouterModule, RouterModule.forRoot(routes), HttpClientModule

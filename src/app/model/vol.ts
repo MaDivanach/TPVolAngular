@@ -1,4 +1,4 @@
-export class Adherent {
+export class Vol {
   constructor(private _id?: number, private _dateDepart?: Date, private _dateArrivee?: Date, private _heureDepart?: Date, private _heureArrivee?: Date) {
 
   }
@@ -11,6 +11,7 @@ export class Adherent {
   set id(value: number) {
     this._id = value;
   }
+
 
   get dateDepart(): Date {
     return this._dateDepart;
@@ -40,10 +41,9 @@ export class Adherent {
     return this._heureArrivee;
   }
 
-  set heureDepart(value: Date) {
+  set heureArrivee(value: Date) {
     this._heureArrivee = value;
   }
-
 }
 
 

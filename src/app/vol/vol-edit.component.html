@@ -1,3 +1,23 @@
-<p>
-  vol-edit works!
-</p>
+<form (ngSubmit)="save()">
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input id="id" class="form-control" [(ngModel)]="vol.id" readonly="readonly" name="id"/>
+  </div>
+  <div class="form-group">
+    <label for="dateDepart">date de depart</label>
+    <input id="dateDepart" class="form-control" [(ngModel)]="vol.dateDepart" name="dateDepart"/>
+  </div>
+  <div>
+    <label for="heureDepart">heure de depart</label>
+    <input id="heureDepart" class="form-control" [(ngModel)]="vol.heureDepart" name="heureDepart"/>
+  </div>
+  <div>
+    <label for="dateArrivee">date de depart</label>
+    <input id="dateArrivee" class="form-control" [(ngModel)]="vol.dateArrivee" name="dateArrivee"/>
+  </div>
+  <div>
+    <label for="heureArrivee"></label>
+    <input id="heureArrivee" class="form-control" [(ngModel)]="vol.heureArrivee" name="heureArrivee"/>
+  </div>
+  <button type="submit" class="btn btn-success"></button>
+</form>

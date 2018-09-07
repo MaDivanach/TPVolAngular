@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ClientService} from '../service/client.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Client} from '../model/client';
 
 @Component({
   selector: 'app-client-edit',
@@ -31,3 +32,4 @@ export class ClientEditComponent implements OnInit {
     });
   }
 }
+

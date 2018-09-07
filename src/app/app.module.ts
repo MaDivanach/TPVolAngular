@@ -16,11 +16,7 @@ import {VolComponent} from './vol/vol.component';
 import {VolService} from './service/vol.service';
 import {ReservationService} from './service/reservation.service';
 import {ClientService} from './service/client.service';
-import { PassagerEditComponent } from './passager/passager-edit.component';
-import { ClientEIEditComponent } from './client/client-ei-edit.component';
-import { ClientMoralEditComponent } from './client/client-moral-edit/client-moral-edit.component';
-import { ClientPhysiqueEditComponent } from './client/client-physique-edit/client-physique-edit.component';
-
+import {PassagerEditComponent} from './passager/passager-edit.component';
 
 
 @NgModule({
@@ -34,11 +30,8 @@ import { ClientPhysiqueEditComponent } from './client/client-physique-edit/clien
     ReservationComponent,
     ReservationEditComponent,
     PassagerComponent,
-    PassagerEditComponent
-    PassagerComponent,
-    ClientEIEditComponent,
-    ClientMoralEditComponent,
-    ClientPhysiqueEditComponent
+    PassagerEditComponent,
+    PassagerComponent
   ],
   imports: [
     BrowserModule, FormsModule, RouterModule, RouterModule.forRoot(routes), HttpClientModule

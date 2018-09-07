@@ -1,5 +1,5 @@
 export class Client {
-  constructor(private _id?: number, private _nom?: string, private _numeroTel?: number, private _numeroFax?: number, private _email?: string, private _adresse?: Adresse, private _Login?: login) {
+  constructor(private _id?: number, private _nom?: string, private _numeroTel?: number, private _numeroFax?: number, private _email?: string, private _adresse?: Adresse, private _login?: Login) {
 
   }
 

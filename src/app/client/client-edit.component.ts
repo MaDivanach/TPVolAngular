@@ -14,6 +14,9 @@ import {ClientEl} from '../model/clientEl';
 export class ClientEditComponent implements OnInit {
 
   client: Client;
+  clientMoral: ClientMoral;
+  clientPhysique: ClientPhysique;
+  clientEl: ClientEl;
 
   constructor(private clientService: ClientService, private ar: ActivatedRoute, private router: Router) {
 

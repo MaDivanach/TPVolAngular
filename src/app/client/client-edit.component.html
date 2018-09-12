@@ -3,20 +3,41 @@
     <label for="id">id</label>
     <input id="id" name="id" [(ngModel)]="client.id" class="form-control" readonly/><br/>
     <div class="form-group">
-      <label for="prenom">prenom</label>
-      <input id="prenom" name="prenom" [(ngModel)]="client.prenom" class="form-control" minlength="3" required/><br/>
-      <div style="color: red" *ngIf="prenom.dirty&&prenom.hasError('required')">prenom obligatoire</div>
-      <div style="color: red" *ngIf="prenom.dirty&&prenom.hasError('minlength')">le prenom doit faire 3 caractères
-        minimum
-      </div>
+      <label for="nom">nom</label>
+      <input id="nom" name="nom" [(ngModel)]="client.nom" class="form-control" minlength="3" required/><br/>
     </div>
     <div class="form-group">
-      <label for="nom">nom</label>
-      <input id="nom" name="nom" [(ngModel)]="client.nom" class="form-control" minlength="3" required
-             #nom="ngModel"/><br/>
-      <div style="color: red" *ngIf="nom.dirty&&nom.hasError('required')">nom obligatoire</div>
-      <div style="color: red" *ngIf="nom.dirty&&nom.hasError('minlength')">le nom doit faire 3 caractères minimum</div>
+      <label for="numeroTel">numeroTel</label>
+      <input id="numeroTel" name="numeroTel" [(ngModel)]="client.numeroTel" class="form-control"/>
     </div>
-    <button type="submit" class="btn btn-success" [disabled]="formulaire.invalid">Enregistrer</button>
+    <div class="form-group">
+      <label for="numeroFax">numeroFax</label>
+      <input id="numeroFax" name="numeroFax" [(ngModel)]="client.numeroFax" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="email">email</label>
+      <input id="email" name="email" [(ngModel)]="client.email" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="adresse">adresse</label>
+      <input id="adresse" name="adresse" [(ngModel)]="client.adresse" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="login">login</label>
+      <input id="login" name="login" [(ngModel)]="client.login" class="form-control"/>
+    </div>
+    <div *ngIf="router.url === '/client/create/physique'" class="form-group">
+      <label for="prenom">prenom</label>
+      <input id="prenomphy" name="prenom" [(ngModel)]="clientPhysique.prenom" class="form-control" minlength="3" required/>
+    </div>
+    <div *ngIf="router.url === '/client/create/el'" class="form-group">
+      <label for="prenom">prenom</label>
+      <input id="prenom" name="prenom" [(ngModel)]="clientEl.prenom" class="form-control" minlength="3" required/>
+    </div>
+    <div *ngIf="router.url === '/client/create/moral'" class="form-group">
+      <label for="siret">siret</label>
+      <input id="siret" name="siret" [(ngModel)]="clientMoral.siret" class="form-control" minlength="3" required/>
+    </div>
   </div>
+  <button type="submit" class="btn btn-success">Enregistrer</button>
 </form>

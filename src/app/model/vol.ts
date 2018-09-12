@@ -1,6 +1,6 @@
 export class Vol {
-  constructor(private _id?: number, private _dateDepart?: Date, private _dateArrivee?: Date, private _heureDepart?: Date, private _heureArrivee?: Date) {
-
+  constructor(private _id?: number, private _dateDepart?: Date, private _dateArrivee?: Date, private _heureDepart?: Date,
+              private _heureArrivee?: Date) {
   }
 
 
